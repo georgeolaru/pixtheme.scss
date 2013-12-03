@@ -19,7 +19,6 @@
 }
 
 .separator--subsection, %separator--subsection {
-    @extend %pattern--diagonal;
     width: 100%;
     @include rem(height, 5px);    
     @include rem(margin-bottom, $_u - 5px);
@@ -27,7 +26,6 @@
 }
 
 .divider--pointer {
-    @extend %pattern--vertical;
     position: absolute;
     top: 50%;
     left: 50%;
