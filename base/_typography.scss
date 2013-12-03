@@ -1,0 +1,156 @@
+/*------------------------------------*\
+               TYPOGRAPHY
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+               LINKS
+\*------------------------------------*/
+
+a {
+    text-decoration: none;
+    color: $accent;
+}
+
+
+
+
+
+/*------------------------------------*\
+               HEADINGS
+\*------------------------------------*/
+
+h1, h2, h3, h4, h5, h6, hgroup, .hN {
+    font-family: $heading-font-family;
+    text-transform: uppercase;
+    @include rem(margin-top, $_2u);
+
+}
+
+.article__title, .article__title .hN, .widget__title .hN, .heading .hN {
+    margin-top: 0;
+}
+
+
+
+
+
+/*------------------------------------*\
+               BLOCKQUOTES
+\*------------------------------------*/
+
+blockquote {
+    position: relative;
+    @include rem(padding-left, $_4u);
+    @include rem(padding-top, $_u);
+    @include font-size(24px);
+    font-family: $heading-font-family;
+    font-style: italic;
+    color: $accent;
+    
+    &:before {
+        content: "";
+        @include rem(width, $_3u);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    &:after {
+        content: open-quote;
+        display: block;
+        position: absolute;
+        @include rem(left, $_u2);
+        @include rem(bottom, -$_u2);
+        @include rem(font-size, 120px);
+        font-style: normal;
+        line-height: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+    }
+}
+
+
+
+/*------------------------------------*\
+               TABLES
+\*------------------------------------*/
+
+.table--bordered{
+
+    tr {
+        border-top: 1px dotted #b2b2b2;
+
+        .site-footer & {
+            border-top-color: lighten($dark, 20%);
+        }
+    }
+
+    th,
+    td{
+        border: 0;
+
+        &:empty{
+            border:inherit;
+        }
+    }
+}
+
+.table--striped{
+
+    tbody tr:nth-of-type(odd){
+        background-color:#fbfbfb; /* Override this color in your theme stylesheet */
+
+        .site-footer & {
+            background-color: lighten($dark, 5%);
+        }
+    }
+}
+
+table {
+    @extend .table--bordered;
+    @extend .table--striped;
+    @extend %separator--section;
+}
+
+
+
+
+
+/*------------------------------------*\
+               LISTS
+\*------------------------------------*/
+
+ol{
+    border-left: 0 solid $accent;
+    @include rem(border-left-width, 5px);
+    @include rem(padding-left, $_2u - 5px);
+    margin-left: 0;
+
+    ul &, ol &, dl & {
+        @include rem(margin-left, $_2u);
+        border-left: 0;
+        padding-left: 0;
+    }
+}
+
+dl {
+
+}
+
+dt {
+    font-weight: bold;
+
+    dd + & {
+        @include rem(margin-top, $_u);
+    }
+}
+
+dd {
+    margin-left: 0;
+}

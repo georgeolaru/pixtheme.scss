@@ -1,12 +1,13 @@
-// WIDGETS
-
-@import "widget";
-
-@import "calendar";
-@import "latest-comments";
-@import "latest-posts";
-@import "popular-posts";
-@import "reviews";
-@import "twitter";
-@import "flickr";
-@import "dribbble";
+/*------------------------------------*\
+    $WIDGETS
+\*------------------------------------*/
+/**
+ * Default and custom widgets
+ */
+@import "widget",
+		"calendar",		
+		"latest-comments",		
+		"latest-posts",					
+		"twitter",		
+		"flickr",		
+		"dribbble";

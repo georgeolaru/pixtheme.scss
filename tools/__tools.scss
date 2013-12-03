@@ -1,7 +1,8 @@
 /*------------------------------------*\
-    $SHORTCODES
+    $TOOLS
 \*------------------------------------*/
 /**
- * Theme specific shortcodes
- */
-@import "grid";
+* Mixins, functions, extenders
+*/
+@import "mixins",
+        "easings";

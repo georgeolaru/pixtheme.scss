@@ -1,0 +1,79 @@
+/*------------------------------------*\
+    $PAGINATIONS
+\*------------------------------------*/
+.pagination{
+    border: none;
+    text-align: center;
+    @include rem(margin, $_2u 0);
+    padding-left: 0;
+
+    .pagination-item--current span {
+        background-color: $accent;
+        color: white;
+        display: inline-block;
+    }
+
+    .pagination-item--prev, .pagination-item--next {
+
+        a {
+            &:before, &:after{
+                display: inline-block;
+                @include transform(rotate(45deg));
+                @include rem(width, 10px);
+                @include rem(height, 10px);
+                @include rem(margin, 0 $_u4);
+                border-color: $dark;
+                border-width: 2px;
+                @include transition(all .15s linear);
+            }
+
+            &:hover {
+                &:before, &:after{
+                    border-color: white;
+                }              
+            }            
+        }        
+    }
+
+    .pagination-item--prev {
+        @include rem(margin-right, $_u);
+        
+        a:before {
+            content: '';
+            border-left-style: solid;
+            border-bottom-style: solid;
+        } 
+    }
+
+    .pagination-item--next {        
+        @include rem(margin-left, $_u);
+
+        a:after {
+            content: '';
+            border-right-style: solid;
+            border-top-style: solid;                 
+        }
+    } 
+
+    li {
+        @include rem(margin-right, 2px);
+
+        a, span {
+            @include rem(padding, $_u4 $_u2);
+            color: black;
+            @include font-size(16px);
+            text-transform: uppercase;
+            @include transition(all .15s linear);
+
+            &:hover{
+                background-color: $accent;
+                color: white;                
+            }
+        }
+
+        .page-numbers.dots:hover{
+            background: white;
+            color: $dark;
+        }
+    }
+}

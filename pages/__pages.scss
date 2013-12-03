@@ -1,7 +1,8 @@
 /*------------------------------------*\
-    $SHORTCODES
+    $PAGES
 \*------------------------------------*/
 /**
- * Theme specific shortcodes
- */
-@import "grid";
+* Single, Page, Category etc.
+*/
+@import "single",
+        "archive";
