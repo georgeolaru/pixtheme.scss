@@ -4,6 +4,7 @@
 /**
  * Page elements; header, footer, sidebar
  */
-@import "header",
+@import "layout-general",
+		"header",
         "footer",
-        "featured-area";
+        "content";
