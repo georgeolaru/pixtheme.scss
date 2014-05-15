@@ -27,7 +27,6 @@
 
 .wp-caption {
     @extend .cf;
-    @extend %pattern--diagonal;
     width: auto !important;
     max-width: 100%;
     @include rem(margin-bottom, $_u + $_u2);

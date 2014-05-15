@@ -15,7 +15,6 @@
 
 .widget--sidebar__title {
     @extend .heading;
-    @extend .heading--sidebar;
 }
 
 
@@ -25,7 +24,6 @@
 
 .widget--footer__title {
     @extend .heading;
-    @extend .heading--footer;
 
     em {
         color: $accent;

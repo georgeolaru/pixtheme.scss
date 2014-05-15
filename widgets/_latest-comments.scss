@@ -38,7 +38,6 @@
 
 .latest-comments__title {
     @extend .article__title;
-    @extend .article__title--inverse;
     @include rem(padding, 0 $_u4);
     overflow: hidden;
     white-space: nowrap;
